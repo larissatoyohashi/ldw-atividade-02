@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação - Sistema de Residências</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased leading-relaxed">
+
+    <header class="bg-white border-b border-gray-300 py-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="text-4xl font-bold text-black tracking-tight mb-4">Sistema de Gestão de Residências</h1>
+            <p class="text-lg text-gray-600 max-w-2xl">
+                Aplicação full-stack para cadastro e listagem de propriedades. Arquitetura dividida entre backend (API e banco de dados) e frontend (Interface de usuário).
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-12">
+
+        <section class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+            <h2 class="text-2xl font-semibold text-black mb-6 pb-2 border-b border-gray-200">1. Execução do Backend</h2>
+            <p class="text-gray-700 mb-4">O backend deve ser inicializado antes do frontend para garantir o fornecimento correto dos dados.</p>
+            
+            <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                <li>Abra o terminal e acesse o diretório do backend:
+                    <pre class="bg-gray-900 text-gray-100 p-3 rounded mt-2 text-sm overflow-x-auto"><code>cd backend</code></pre>
+                </li>
+                <li>Instale as dependências diretamente via pip:
+                    <pre class="bg-gray-900 text-gray-100 p-3 rounded mt-2 text-sm overflow-x-auto"><code>pip install fastapi uvicorn</code></pre>
+                </li>
+                <li>Inicie o servidor local:
+                    <pre class="bg-gray-900 text-gray-100 p-3 rounded mt-2 text-sm overflow-x-auto"><code>uvicorn main:app --reload</code></pre>
+                </li>
+            </ol>
+            <p class="mt-4 text-sm text-gray-500 italic">O servidor estará rodando em http://127.0.0.1:5000</p>
+        </section>
+
+        <section class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+            <h2 class="text-2xl font-semibold text-black mb-6 pb-2 border-b border-gray-200">2. Execução do Frontend</h2>
+            <p class="text-gray-700 mb-4">Certifique-se de que a API (backend) esteja operando antes de iniciar a interface.</p>
+            
+            <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                <li>Abra um novo terminal e acesse o diretório do frontend:
+                    <pre class="bg-gray-900 text-gray-100 p-3 rounded mt-2 text-sm overflow-x-auto"><code>cd frontend</code></pre>
+                </li>
+                <li>Instale as dependências da interface e conexão:
+                    <pre class="bg-gray-900 text-gray-100 p-3 rounded mt-2 text-sm overflow-x-auto"><code>pip install flet requests</code></pre>
+                </li>
+                <li>Execute a aplicação:
+                    <pre class="bg-gray-900 text-gray-100 p-3 rounded mt-2 text-sm overflow-x-auto"><code>python main.py</code></pre>
+                </li>
+            </ol>
+            <p class="mt-4 text-sm text-gray-500 italic">A interface será aberta automaticamente no seu navegador padrão.</p>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-8 text-gray-500 text-sm border-t border-gray-200">
+        <p>DSM 4 - LARISSA EYMI TOYOHASHI</p>
+    </footer>
+
+</body>
+</html>
